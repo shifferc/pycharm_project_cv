@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CV Website Chen Shiffer</title>
+        <link rel="stylesheet" type="text/css" href="static/CSS/styleCV.css">
+        <script src="static/JS/cvJS.js" ></script>
+        
+        
+    </head>
+    
+    <body >
+
+<!--header-->
+        <header style="background-image: url('/static/IMG/background.png')">
+            <h4 id="year"> <script>date();</script></h4>
+                <h1 class="h1"> Hi!<br>
+                    I'm Chen Shiffer <br>  </h1> <br>
+                    <img src="/static/IMG/chens.jpg" alt="chen" width=13%>
+                <h3 id="h3">Fourth Year Student for Industrial Engineering and Management</h3>    
+                    <ul><li> <a href="#about-me"> About Me</a> </li>
+                        <li> <a href="#experience"> Work Experience</a> </li>
+                        <li> <a href="#contact"> Contact</a> </li>
+                     </ul>  
+           
+        </header>
+ <!--aboutme-->       
+        <section class="about-me" id="about-me" style="background-image: url('/static/IMG/aboutmw2.png')">
+           
+            <div class="wrapper">
+                <h2>About Me</h2>
+                            <p>
+                                Industrial Engineering and Management student at Ben Gurion University of the Negev- Specializing in Information Systems. <br>
+                                Professional knowledge in Java, Python, Rstudio, SQL, HTML, VBA, PowerBI, MySQL and MS Office.<br>
+                                I'm cooperative, innovative, auto-didactic and a teamworker with great analystical skills.<br>
+                                Passionate to be a part of some great projects with lasting impact in the field of data.<br><br>
+                            </p>
+                            <a  href="/static/CV-Chen Shiffer.pdf" target="_blank">Download CV  </a>
+                            <a  href="/contactL" target="_blank">Contact List</a>
+                            <a  href="https://www.linkedin.com/in/chen-shiffer-b7b9851a2/" target="_blank">LinkedIn</a>
+                            <a  href="/assignment8" target="_blank">ASSIGNMENT8</a>
+            </div>
+
+        </section>
+<!--experience-->
+
+        <section class="Experience" id="experience" style="background-image: url('/static/IMG/experience.png')">
+                <h2>Work Experience</h2>
+                <h3>--------------AUGUST 2018 - CURRENT---------------</h3>
+                <h4>Project Manager<br/> Expertroute LTD <br/></h4>
+                 
+                  <ul>
+                      <li>Improving efficiency of processes and increase profitability for various organization using technological solutions. </li>
+                      <li>Managing and monitoring projects, prioritize tasks and feature development according to client's KPIs.</li>
+                      <li>Leading system development projects and implementing systems end-to-end while managing schedule.</li>
+                      <li>System analysis, writing specification document and defining requirements to developers.</li>
+                      <li>Performing tests and supervising the software/product according to spec and requirements.</li>
+                      <li>Working closely with developers and end-users to ensure technical compatibility.</li>
+                      <li> Design and plan dashboards and reports to monitor and simplify data to business owners.</li>
+                  </ul>
+                  <h3>------------JULY 2014 - JULY 2016---------------</h3>
+                <h4>Experience During Military Service<br/> Served in the Human Resources Directorate- responsible for<br>
+                    human resources processes and handling the command
+                    level. </h4>
+                 
+                  <ul>
+                      <li>Preperations for inaugural discussions for senior positions in the department </li>
+                      <li>Maimtain ongoing relationships with bereaved families.</li>
+                      <li>Logistical assistance in planning and producing military events.</li>
+                  
+                  </ul>
+                
+        </section>
+ <!--contact-->
+ 
+        <section class="Contact" id="contact" style="background-image: url('/static/IMG/contact1.png')">
+            <h1 id=hContact >Contact Form</h1>
+            <div class=error id="error_message"></div>
+            <form id="contct-form" method="POST"   onsubmit="return validate();">
+              <input type="txet" id="name" class="form-control" placeholder="Full Name" required> <br>     
+              <input type="email" id="email" class="form-control"   placeholder="E-mail" required> <br>      
+              <input type="tel" id="phone" class="form-control"   placeholder="Phone Number" required> <br>            
+              <textarea name="Message" class="form-control" placeholder="Message" row="4" required></textarea> <br>
+              <input id="subbtn" type="submit" class="form-control-submit"  value="SEND MESSAGE" > 
+             
+
+            </form>
+        </section>
+<!--copyright-->
+        <footer>
+            &copy; Copyright 2020 Chen Shiffer. All rights reserved.
+        </footer>
+
+       
+    </body>
+
+</html>

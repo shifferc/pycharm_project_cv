@@ -1,0 +1,233 @@
+
+/*downloaded font for all pages************/
+@font-face{
+    font-family: main;
+    src:url('/static/FjallaOne-Regular.ttf');
+}
+@font-face{
+    font-family: hand;
+    src:url('/static/Courgette-Regular.ttf');
+}
+*{
+    font-family: main;
+    padding:3px;
+    margin:10px;
+  
+}
+
+body {
+    background-color:rgb(201, 198, 198) ;
+}
+/*header**********************************/
+header{
+
+    height: 70vh;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    background-size: cover;
+    text-align: center;
+}
+header h1{
+    letter-spacing: 2px;
+}
+
+ header h3{
+color:black;
+padding: 20px;
+font-size: 30px;
+}
+/*Date*/
+header h4{
+    margin-left: 82.5%;
+    position: absolute;
+    top:17%; 
+    font-size:140%;
+    font-family: hand;
+    color: #D4AF37; 
+    -webkit-text-stroke:0.05px #000000;
+  
+}
+
+header h4:hover{
+    transform: scale(1.2);
+}
+/*rounded pic*/
+header img{
+    border-radius: 80%;
+    border: 6px solid rgba(106, 143, 6, 0.5);
+    transition: transform .5s ease-out;/*zoom in */
+    cursor : pointer;
+   
+}
+/*zoom in */
+ header img:hover{
+    transform: scale(1.2);
+}
+
+header ul{
+    text-shadow:  2px 2px 8px #D4AF37;
+    list-style:none;    
+}
+header ul li{
+    display: inline;
+  
+}
+
+header ul li a{
+     text-decoration: none;
+    color: gray; margin:39px; font-size:25px;
+    
+}
+/*under line when hover*/
+header ul li a:hover{
+ padding-bottom:10px;
+border-bottom: 5px solid rgba(15, 15, 15,0.5);
+}
+/*about me**************************/
+.about-me{
+
+    background-position:right 20% bottom 100%;
+    height: 70vh;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    background-size: cover;
+  
+}
+
+.about-me .wrapper h2{
+    font-size: 24px;
+    text-align: center;
+    margin-top:7%;
+    
+}
+.about-me h2:hover{
+    transform: scale(1.1);
+    text-align: center;
+}
+.about-me .wrapper p{
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    width:100%;
+
+  
+}
+
+.about-me .wrapper a{
+    position:relative;
+    left:33%;
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 15px;
+    padding:0.8% 0.8%;
+    background:linear-gradient(90deg,#92ad53,#ece471); 
+    font-size: 22px;
+    letter-spacing: 2px;
+    box-shadow: rgba(0,0,0,0.7) 1px 2px 2px;
+    border:none;
+    cursor:pointer;
+}
+
+.about-me .wrapper a:hover{
+    background:linear-gradient(90deg,#7a9146,#76940a);
+    color:black;
+}
+/*experience*******************************/
+.Experience{
+    height: 70vh;
+    background-size: cover;
+    padding:15px 10px; 
+    text-align: center;
+    align-items: center;
+
+}
+.Experience h3{
+color:	#D4AF37;
+border: 2px solid rgb(10, 9, 9);
+border-radius: 5px;
+border-color: #D4AF37;
+}
+
+.Experience ul{
+    list-style: square;
+    list-style-position: inside;
+    width:1000px;
+    text-align: justify;
+    margin-left:30%;
+    line-height: 80%;
+    font-size:18px;
+   
+}
+.Experience h2:hover{
+    transform: scale(1.1);
+}
+/*contact***************************************/
+.Contact{
+
+    height: 70vh;
+    background-size: cover;
+    padding:15px 10px; 
+    text-align: center;
+    align-items: center;
+}
+
+.Contact h1:hover{
+    transform: scale(1.1);
+}
+.error{
+    font-size: 16px;
+    color:black; text-shadow: 0 1px 3px rgb(190, 165, 22);
+    font-weight: bold;
+    position:absolute;
+    left:44%;
+    
+}
+form{
+    margin-top:20px;
+    transition: all 4s ease-in-out;
+    box-shadow:2px 2px 2px 2px #888888;
+
+   
+}
+.form-control{
+    width:350px;
+    background:transparent;
+    border:none;
+    outline:none;
+    border-bottom:1px solid gray;
+    color:black;
+    font-size:18px;
+    margin-bottom:16px;
+    height:80px;
+   
+}
+
+input{
+    height:45px;
+  
+}
+.form-control-submit{
+     color:#fff;
+    background:#D4AF37;
+    border-color:rgba(105, 96, 96, 0.877);
+    font-size:20px;
+    letter-spacing:2px;
+    height:50px;
+    margin-top:20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 15px;
+    padding:10px 20px;
+    background:linear-gradient(90deg,gray,#D4AF37); 
+    text-align: center;
+    letter-spacing: 2px;
+    box-shadow: rgba(0,0,0,0.7) 1px 2px 2px;
+}
+    
+.form-control-submit:hover{
+    background:linear-gradient(90deg,white,gray);
+    color:black; 
+}
+footer{
+    text-align: center;
+}
