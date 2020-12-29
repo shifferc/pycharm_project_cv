@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ass9</title>
+</head>
+<body>
+<h1>ASSIGNMENT 9</h1>
+<h3>search form with get method</h3>
+<form method="GET">
+    <input name="first_name"  placeholder="first_name">
+    <input type="submit"  >
+</form>
+
+{% if  first_name in users %}
+    {% for k, v in users.items() %}
+        {% if first_name==k %}
+            {{ k }} {{ v }}
+        {% endif %}
+    {% endfor %}
+ {% else %}
+    {% for user in users.items() %}
+{{ user }}
+{% endfor %}
+{%  endif %}
+
+
+
+<h3>registration form with post method</h3>
+<div id="myDIV">
+<form method="POST">
+    <input name="username" placeholder="username">
+    <input name="password" placeholder="password">
+    <input type="submit" >
+</form>
+</div>
+{% if session.get('logged_in') %}
+<h2> hello {{ session.get('username' )}}!</h2>
+{% endif %}
+
+<br>
+<button type="button" onclick="myFunction()">logout</button>
+<script>
+    function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+
+
+</body>
+</html>
+
+</body>
+</html>

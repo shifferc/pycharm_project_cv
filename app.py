@@ -1,6 +1,8 @@
 from flask import Flask, render_template, redirect, url_for
-
+from flask import request
+from flask import session
 app = Flask(__name__)
+app.secret_key='123'
 
 @app.route('/')
 def hello_world():
@@ -9,6 +11,22 @@ def hello_world():
 @app.route('/contactL')
 def contactL():
     return render_template('contactList.html')
+
+@app.route('/assignment9', methods=['GET','POST'])
+def ass9():
+    users={'chen':['shiffer','0504776625'],'linoy':['lutati','0523443325'],
+           'liran':['bass','0544444325'],'gal':['shapira','05587663823']}
+
+    if 'first_name' in request.args:
+        first_name = request.args['first_name']
+
+    if request.method == 'POST':
+        username = request.form['username']
+        session['username'] = username
+        session['logged_in'] = True
+
+    return render_template('assignment9.html', request_method=request.method,
+                           users=users,first_name=first_name)
 
 @app.route('/assignment8')
 def ass():

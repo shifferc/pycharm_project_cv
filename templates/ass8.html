@@ -5,7 +5,9 @@
     </head>
     
     <body style="background-color:lightgray">
-    <h2> Hey {{ name|title }} !</h2>
+{% if session.get('logged_in' )%}
+    <h2> hello {{ session.get('username') }}!</h2>
+    {% endif %}
     {% include 'include_ass8.html' %}
     <h1> My Hobbies</h1>
     <h3> I really like to program in web classes</h3>

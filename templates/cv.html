@@ -9,7 +9,9 @@
     </head>
     
     <body >
-
+{% if session.get('logged_in' )%}
+    <h5> hello {{ session.get('username') }}!</h5>
+    {% endif %}
 <!--header-->
         <header style="background-image: url('/static/IMG/background.png')">
             <h4 id="year"> <script>date();</script></h4>
@@ -65,7 +67,7 @@
                   <ul>
                       <li>Preperations for inaugural discussions for senior positions in the department </li>
                       <li>Maimtain ongoing relationships with bereaved families.</li>
-                      <li>Logistical assistance in planning and producing military events.</li>
+
                   
                   </ul>
                 
@@ -84,9 +86,11 @@
              
 
             </form>
+            <br>
         </section>
 <!--copyright-->
         <footer>
+            <br>
             &copy; Copyright 2020 Chen Shiffer. All rights reserved.
         </footer>
 
