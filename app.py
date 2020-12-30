@@ -14,13 +14,13 @@ def contactL():
 
 @app.route('/assignment9', methods=['GET','POST'])
 def ass9():
-
+    first_name = request.args.get('first_name')
 
     users={'chen':['shiffer','0504776625'],'linoy':['lutati','0523443325'],
            'liran':['bass','0544444325'],'gal':['shapira','05587663823']}
 
-    if 'first_name' in request.args:
-        first_name = request.args['first_name']
+
+
 
     if request.method == 'POST':
         username = request.form['username']
