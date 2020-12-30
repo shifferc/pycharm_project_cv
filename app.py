@@ -14,6 +14,8 @@ def contactL():
 
 @app.route('/assignment9', methods=['GET','POST'])
 def ass9():
+
+
     users={'chen':['shiffer','0504776625'],'linoy':['lutati','0523443325'],
            'liran':['bass','0544444325'],'gal':['shapira','05587663823']}
 
@@ -24,6 +26,8 @@ def ass9():
         username = request.form['username']
         session['username'] = username
         session['logged_in'] = True
+
+
 
     return render_template('assignment9.html', request_method=request.method,
                            users=users,first_name=first_name)
