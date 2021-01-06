@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ass 10</title>
+</head>
+<body>
+<h1> assignment 10</h1>
+<h2>insertion form</h2>
+<form action="/insert_user" method="post" onsubmit="alert('you inserted a user')">
+ <input name="first_name" placeholder="first name">
+    <br>
+ <input name="last_name" placeholder="last name">
+    <br>
+ <input name="phone" placeholder="phone number">
+    <br>
+    <input type="submit">
+</form>
+
+<h2>update form</h2>
+<form action="/update_user" method="post" onsubmit="alert('you updated a user')">
+  <input name="user_id" placeholder="user_id">
+    <br>
+ <input name="first_name" placeholder="first name">
+    <br>
+ <input name="last_name" placeholder="last name">
+    <br>
+ <input name="phone" placeholder="phone number">
+    <br>
+    <input type="submit">
+</form>
+<h2>deletion form</h2>
+<form action="/delete_user" method="post" onsubmit="alert('you deleted a user')">
+ <input name="user_id" placeholder="user_id">
+    <br>
+
+    <input type="submit">
+</form>
+<h2>list of users</h2>
+<ul>
+{%  if users %}
+    {% for user in users %}
+        <li>
+            {{ user.id }}:
+            <b> {{ user.first_name }}</b> {{ user.last_name }} ({{ user.phone_number }})
+        </li>
+    {% endfor %}
+{% endif %}
+
+</ul>
+
+
+
+</body>
+</html>
