@@ -1,7 +1,9 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, jsonify
 from flask import request
 from flask import session
 import mysql.connector
+
+
 app = Flask(__name__)
 app.secret_key='123'
 
@@ -35,6 +37,25 @@ def hello_world():
 def contactL():
     return render_template('contactList.html')
 
+@app.route('/assignment11/users', methods=['get'])
+def ass11():
+    query = "SELECT * FROM users "
+    query_result = interact_db(query, query_type='fetch')
+    return jsonify(users=query_result)
+
+    return jsonify(userss)
+
+@app.route('/assignment11/users/selected/id/', defaults={'id':None})
+@app.route('/assignment11/users/selected/id/<int:id>')
+
+def get_user(id=None):
+    if id:
+        query = "SELECT * FROM users WHERE id='%s'" % id
+        query_result = interact_db(query, query_type='fetch')
+        return jsonify( users=query_result)
+    else:
+        return jsonify({'sucsess':False})
+
 @app.route('/assignment9', methods=['GET','POST'])
 def ass9():
     first_name = request.args.get('first_name')
@@ -43,13 +64,10 @@ def ass9():
            'liran':['bass','0544444325'],'gal':['shapira','05587663823']}
 
 
-
-
     if request.method == 'POST':
         username = request.form['username']
         session['username'] = username
         session['logged_in'] = True
-
 
 
     return render_template('assignment9.html', request_method=request.method,
